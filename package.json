@@ -1,0 +1,15 @@
+{
+  "name": "itops",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.19.0",
+  "engines": { "node": ">=24.0.0 <25" },
+  "scripts": {
+    "dev": "concurrently --kill-others -n api,web \"pnpm --filter @itops/backend dev\" \"pnpm --filter @itops/frontend dev\"",
+    "check": "pnpm -r check",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": { "concurrently": "^9.2.1" }
+}
+
